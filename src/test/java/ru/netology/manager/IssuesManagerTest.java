@@ -86,7 +86,7 @@ class IssuesManagerTest {
     @Test
     void shouldFindByTwoAssignee() {
         manager.addAll(List.of(issue1, issue2, issue3));
-        Set<Issue> expected = new HashSet<>(List.of(issue2,issue3));
+        Set<Issue> expected = new HashSet<>(List.of(issue2, issue3));
         Set<Issue> actual = manager.searchByAssignee(new HashSet<String>(Arrays.asList("Tamara", "Stepan", "Oleg")));
         assertEquals(expected, actual);
     }

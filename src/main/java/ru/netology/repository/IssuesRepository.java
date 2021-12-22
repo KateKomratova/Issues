@@ -46,7 +46,6 @@ public class IssuesRepository {
     }
 
     public void closeById(int id) {
-        List<Issue> issues = new ArrayList<>();
         for (Issue item : items) {
             if (item.getId() == id && item.isOpen()) {
                 item.setOpen(false);
@@ -55,7 +54,6 @@ public class IssuesRepository {
     }
 
     public void openById(int id) {
-        List<Issue> issues = new ArrayList<>();
         for (Issue item : items) {
             if (item.getId() == id && !item.isOpen()) {
                 item.setOpen(true);
